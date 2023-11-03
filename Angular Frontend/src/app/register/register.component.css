@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.container{
+  max-width: 700px;
+  width: 100%;
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+.container .title{
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+}
+.container .title::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+.content .form .user-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+.form .user-details .input-box{
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+.form .input-box span.details{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.user-details .input-box select {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+  }
+  
+.user-details .input-box select:focus,
+.user-details .input-box select:valid {
+  border-color: #9b59b6;
+}
+
+.user-details .input-box select::-ms-expand {
+  display: none;
+}
+.user-details .input-box select option {
+  font-size: 16px;
+}
+
+.user-details .input-box input{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+  border-color: #9b59b6;
+}
+
+.user-details .input-box textarea {
+  height: 45px; 
+  width: 100%; 
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+
+.user-details .input-box textarea:focus,
+.user-details .input-box textarea:valid {
+  border-color: #9b59b6;
+}
+
+ .form .gender-details .gender-title{
+  font-size: 20px;
+  font-weight: 500;
+ }
+
+ .form .buttons {
+  height: 45px;
+  margin: 22px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative; 
+}
+
+.form .buttons input {
+  width: 100%;
+  height: 43px;
+  background-color: #151111;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.8rem;
+  font-size: 15px;
+  transition: 0.3s;
+  margin: 10px;
+}
+
+.form .buttons input:hover {
+  background-color: #c1d3fe;
+  color: black;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+.validation-message {
+  color: red;
+  font-size: 12px;
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+}
+
+.input-box {
+  position: relative;
+}
+
+.input-box .details::before {
+  content: "*";
+  color: red;
+  display: inline-block;
+  margin-right: 4px;
+  font-size: 12px;
+  vertical-align: top;
+}
+
+.custom-toast {
+  background-color: #4caf50;
+  color: white;
+  border-radius: 8px;
+  padding: 10px 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  height: 50px;
+  position: relative;
+  top:-480px;
+  left:400px;
+}
+
+/* Media queries for responsiveness */
+
+@media (max-width: 1250px) {
+  .container {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 850px) {
+  .user-details .input-box {
+    width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .container .title {
+    font-size: 20px;
+    margin-top: 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  .form .user-details .input-box {
+    width: 100%
+  }
+  
+  .buttons {
+    width: 100%; 
+    position: static;
+    text-align: center;
+  }
+  
+  .custom-toast {
+    top: 10px; 
+    left: 0;
+  }
+
+  .container {
+    height: 1050px;
+  }
+}
+
+@media (max-width: 500px) {
+  .form .user-details {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .input-box {
+    width: 100%;
+  }
+  
+  .buttons {
+    width: 100%;
+    position: static;
+  }
+  
+  .custom-toast {
+    top: -20px;
+    left: 0;
+  }
+}
+
+@media (max-width: 250px) {
+  .form .title {
+    font-size: 18px;
+  }
+}
+
